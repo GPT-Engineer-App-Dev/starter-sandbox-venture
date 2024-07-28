@@ -15,13 +15,13 @@ const data = [
 ];
 
 const StatCard = ({ title, value, icon: Icon }) => (
-  <Card>
+  <Card className="bg-secondary">
     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
       <CardTitle className="text-sm font-medium">{title}</CardTitle>
-      <Icon className="h-4 w-4 text-muted-foreground" />
+      <Icon className="h-4 w-4 text-primary" />
     </CardHeader>
     <CardContent>
-      <div className="text-2xl font-bold">{value}</div>
+      <div className="text-2xl font-bold text-primary">{value}</div>
     </CardContent>
   </Card>
 );
@@ -58,7 +58,7 @@ const Index = () => {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
-                <Line type="monotone" dataKey="value" stroke="#8884d8" />
+                <Line type="monotone" dataKey="value" stroke="hsl(var(--primary))" strokeWidth={2} />
               </LineChart>
             </ResponsiveContainer>
           </div>
